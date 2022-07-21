@@ -1,0 +1,103 @@
+.guitar-page .header {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    border-radius: 0 0 24px 24px;
+  }
+
+  &__text-container {
+    padding-left: 72px;
+    color: #fff;
+  }
+
+  &__title {
+    font-family: "Museo Extra Bold", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 58px;
+    text-transform: uppercase;
+    max-width: 455px;
+    width: 100%;
+    margin: 0;
+    color: #fc6b3f;
+  }
+
+  &__subtitle {
+    font-family: "Museo Light", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 26px;
+    max-width: 455px;
+    width: 100%;
+    margin: 24px 0 0;
+  }
+
+  &__banner img {
+    max-width: 660px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__title {
+      font-size: 32px;
+      line-height: 34px;
+      max-width: 380px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      margin: 16px 0 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__title {
+      font-size: 22px;
+      line-height: 22px;
+      max-width: 260px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &__banner img {
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    justify-content: center;
+
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 32px 24px 0;
+    }
+
+    &__title {
+      font-size: 22px;
+      text-align: left;
+      align-self: flex-start;
+    }
+
+    &__subtitle {
+      align-self: flex-start;
+      text-align: left;
+      font-size: 16px;
+      line-height: 18px;
+      max-width: 300px;
+    }
+  }
+}

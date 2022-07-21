@@ -1,0 +1,83 @@
+.guitar-page .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 243px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+
+    &:nth-child(3) {
+      max-width: 100%;
+      justify-content: space-around;
+      flex-direction: row;
+      grid-column: span 2;
+      order: -1;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    max-width: 200px;
+    padding: 8px;
+  }
+
+  &__image {
+    max-width: 170px;
+    width: auto;
+
+    @media screen and (max-width: 425px) {
+      max-width: 120px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 24px 0 0;
+
+    @media screen and (max-width: 425px) {
+      font-size: 14px;
+      margin: 16px 0 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 24px 0;
+    transition: background 0.4s ease-in-out;
+
+    &:hover {
+      background-color: #f4f4f4;
+      border: 1px solid #707070;
+    }
+
+    @media screen and (max-width: 1024px) {
+      align-self: flex-start;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 12px;
+      padding: 6px;
+      border-radius: 6px;
+      margin: 16px 0;
+      align-self: flex-start;
+    }
+  }
+}

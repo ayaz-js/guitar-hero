@@ -1,0 +1,58 @@
+.guitar-page .logo-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    justify-items: center;
+
+    &__item {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(6),
+      &:nth-child(7) {
+        grid-column: span 3;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  &__icon {
+    max-width: 120px;
+    width: auto;
+    filter: contrast(0);
+    transition: filter 0.4s ease-in-out;
+
+    &:hover {
+      filter: contrast(1);
+    }
+
+    @media screen and (max-width: 1024px) {
+      max-width: 200px;
+    }
+
+    @media screen and (max-width: 425px) {
+      max-width: 100px;
+    }
+  }
+}

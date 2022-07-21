@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: #f7f7f7;
+}
+
+button + button {
+  margin-left: 0 !important;
+}
+
+@media (min-width: 1280px) {
+  .cms-page {
+    &__breadcrumbs {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.cms-page li:last-child {
+  margin: 0 !important;
+}
+
+.guitar-page * {
+  box-sizing: border-box;
+}
+
+.guitar-page {
+  font-family: "Museo Regular", sans-serif;
+  max-width: 1232px;
+  margin: 0 auto;
+}

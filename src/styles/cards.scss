@@ -1,0 +1,16 @@
+.guitar-page .cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 16px;
+  padding: 68px 0 0;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 48px 16px;
+  }
+
+  @media screen and (max-width: 425px) {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,233 @@
+.products * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.products-slider {
+  a {
+    text-decoration: none;
+    color: #202020;
+    margin-left: 0;
+  }
+}
+
+.products {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 575px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  a {
+    text-decoration: none;
+    color: red;
+    margin-left: 0;
+
+    &:focus-visible {
+      outline: 1px solid var(--primary);
+    }
+  }
+}
+
+.product {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 375px;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0 0 0 / 0.15%);
+  }
+
+  & &__stickers-list {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 100px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 575px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  & &__sticker {
+    max-width: 60px;
+    flex-shrink: 0;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 7px 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    font-family: "Museo Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f48012;
+
+    &::before {
+      content: "";
+    }
+
+    &--discount {
+      background-color: #b4d252;
+    }
+
+    &--new {
+      background-color: #6fbebc;
+    }
+
+    &--installment {
+      background-color: #f48012;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    text-align: center;
+  }
+
+  &__gift {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__gift-icon {
+    max-width: 28px;
+    width: auto;
+  }
+
+  &__image {
+    max-width: 165px !important;
+    height: 165px !important;
+    object-fit: cover;
+
+    @media screen and (max-width: 425px) {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  & &__title {
+    /* stylelint-disable */
+    display: -webkit-box;
+    /* stylelint-enable */
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    min-height: 72px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #202020;
+    font-family: "Museo Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 24px;
+
+    @media screen and (max-width: 575px) {
+      -webkit-line-clamp: 1;
+      font-size: 14px;
+    }
+  }
+
+  &__price-container {
+    min-height: 53px;
+  }
+
+  & &__current-price {
+    top: 0;
+    color: #202020;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Museo Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    &--orange {
+      color: #ff7112;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 15px;
+    }
+  }
+
+  & &__previous-price {
+    top: 0;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-decoration: line-through;
+    color: #737171;
+  }
+
+  & &__loan {
+    margin: 8px 0;
+    padding: 4px 6px;
+    background-color: #fdf8e2;
+    border-radius: 4px;
+  }
+
+  & &__loan-caption {
+    font-family: "Museo Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #202020;
+    margin: 0;
+  }
+
+  &__orange-caption {
+    color: #ff7a28;
+  }
+
+  & &__more-info {
+    display: none;
+    width: 100%;
+    padding: 18px 10px;
+    background: #fff;
+    box-shadow: 0 16px 30px 0 rgba(0 0 0 / 0.15%);
+    border-top: none;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  & &__info-btn {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 7px 39px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    color: #fff;
+    transition: 0.3s;
+    background: #ff681d;
+    border: none;
+    border-radius: 8px;
+    font-family: "Museo Regular", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
