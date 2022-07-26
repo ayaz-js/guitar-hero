@@ -1,99 +1,53 @@
 /* eslint-disable */
 let getItemList = {
-  garnitura: {
-    items: [
-      66744, 66745, 218814, 138948, 226585, 110717, 235849, 235850, 235851,
-      226586, 66740, 218490, 108627, 176427, 218817, 156306, 216621, 156307,
-      234180, 133689, 191406,
-    ],
+  electroGuitars: {
+    items: [255644,260469,262522,262523,262524,221552,262492,221553],
     categories: [],
     exclude_brands: [],
-    link: 'https://www.technodom.kz/smartfony-i-gadzhety/naushniki/vse-naushniki/f/brands/hyperx/cl-naushniki-harakteristiki-792/igrovihe',
+    link: '/catalog/tv-audio-foto-video/muzykal-nye-instrumenty/gitary/f/cl-1998-harakteristiki-type/ehlektro',
   },
-  keyboard: {
-    items: [133690, 176482, 230775, 212137, 246484, 224418, 151901],
+  ukulele: {
+    items: [260474,260476,260475,260470,260471,260473,260472],
     categories: [],
-    link: 'https://www.technodom.kz/noutbuki-i-komp-jutery/komp-juternye-aksessuary/klaviatury/f/brands/hyperx/cl-klaviatury-osnovnyye-380/igrovaja',
+    link: '/catalog/tv-audio-foto-video/muzykal-nye-instrumenty/gitary/f/cl-1998-harakteristiki-type/ukulele',
   },
-  mouse: {
-    items: [107348, 232527, 215364, 122711, 128346, 176483],
+  acusticGuitars: {
+    items: [262522,262523,262524,221552,262492,221553,260467,254264,254187,260381],
     categories: [],
-    link: 'https://www.technodom.kz/noutbuki-i-komp-jutery/komp-juternye-aksessuary/myshi/f/brands/hyperx/cl-myshi-osnovnyye-game-mouse/da',
+    link: '/catalog/tv-audio-foto-video/muzykal-nye-instrumenty/gitary/f/cl-1998-harakteristiki-type/akusticheskaja',
   },
-  microphones: {
-    items: [151900, 229480, 230932],
+  electroAcusticGuitars: {
+    items: [256952,262493,262494,254190,254192],
     categories: [],
-    link: 'https://www.technodom.kz/tv-audio-foto-video/audio-tehnika/mikrofony/f/brands/hyperx/cl-microphones-main-792/igrovoy-mikrofon',
+    link: '/catalog/tv-audio-foto-video/muzykal-nye-instrumenty/gitary/f/cl-1998-harakteristiki-type/ehlektroakusticheskaja',
   },
-  carpets: {
-    items: [66759, 156310, 212143],
+  classicGuitars: {
+    items: [254963,245862],
     categories: [],
-    link: 'https://www.technodom.kz/noutbuki-i-komp-jutery/komp-juternye-aksessuary/kovriki-dlja-myshi/f/brands/hyperx/cl-kovriki-osnovnyye-gaming-mouse-pad/da',
-  },
-  chargers: {
-    items: [176425],
-    categories: [],
-    link: 'https://www.technodom.kz/vsjo-dlja-gejmerov/playstation/aksessuary-playstation/f/brands/hyperx',
+    link: '#',
   },
 };
 
 const categories = [{
-    name: 'Игровые гарнитуры',
-    dataAttribute: 'garnitura',
+    name: 'Гитары электрические',
+    dataAttribute: 'electroGuitars',
   },
   {
-    name: 'Игровые клавиатуры',
-    dataAttribute: 'keyboard',
+    name: 'Укулеле',
+    dataAttribute: 'ukulele',
   },
   {
-    name: 'Игровые мышки',
-    dataAttribute: 'mouse',
+    name: 'Гитары акустические',
+    dataAttribute: 'acusticGuitars',
   },
   {
-    name: 'Игровые микрофоны',
-    dataAttribute: 'microphone',
+    name: 'Электроакустическая Гитара',
+    dataAttribute: 'electroAcusticGuitars',
   },
   {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
+    name: 'Гитары Классические',
+    dataAttribute: 'classicGuitars',
   },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-  {
-    name: 'Зарядные устройства',
-    dataAttribute: 'chargers',
-  },
-
 ]
 
 if (categories.length > 0) {
